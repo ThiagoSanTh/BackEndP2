@@ -1,11 +1,11 @@
 <h1>Lista de Tarefas</h1>
 
 <ul>
-    {% for todo in todos %}
+    {% for todo in todo_list %}
      
     <li> {{todo.title}} -
 
     {% endfor %}
 </ul>
 
-<a href="#">Criar Nova Tarefa</a>
+<a href="{% url 'todo_create' %}">Criar Nova Tarefa</a>

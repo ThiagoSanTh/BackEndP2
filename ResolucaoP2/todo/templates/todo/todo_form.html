@@ -1,0 +1,9 @@
+<h1>{% if object %}Editar{% else %}Criar{% endif %} Tarefa</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">{% if object %}Editar{% else %}Criar{% endif %} Tarefa</button>
+</form>
+
+    <a href="{% url 'todo_list' %}"> Cancelar</a>
